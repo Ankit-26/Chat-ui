@@ -1,0 +1,49 @@
+.tool-header {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #3c3a3a;
+  border: 0px;
+  border-radius: 4px;
+  border-top: 0;
+  box-shadow: 0px 0px 10px 1px rgb(36 36 36);
+  color: #d4d0d0;
+}
+
+.upper-sec {
+  display: flex;
+  padding: 15px;
+}
+
+.lower-sec {
+  border-top: 1px solid #8a8989;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: small;
+  padding: 7px;
+}
+
+.apply-button {
+  display: flex;
+  align-items: center;
+  background-color: #636262;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-right: 3px;
+  color: #939393;
+}
+
+.apply-button svg {
+  font-size: 13px;
+}
+
+.cancel {
+  padding-right: 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.apply-text {
+  padding-left: 5px;
+}

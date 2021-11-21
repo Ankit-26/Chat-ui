@@ -1,0 +1,52 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(67 79 165);
+  color: white;
+  padding: 11px 0;
+  box-shadow: 0px 0px 6px 4px rgb(24 23 23);
+  position: relative;
+}
+
+.nav-barLeft {
+  display: flex;
+  align-items: center;
+  margin-left: 1.2em;
+}
+
+.menu-icon,
+.XBSL {
+  display: flex;
+  align-items: center;
+}
+
+.XBSL {
+  font-size: 0.99rem;
+  padding-left: 1.7em;
+}
+
+.nav-barRight {
+  padding-right: 17px;
+}
+
+.notification {
+  display: flex;
+  position: relative;
+}
+
+.notification-icon svg {
+  font-size: 1.3em;
+}
+
+.notfication-count {
+  font-size: 0.7em;
+  background-color: rgb(184, 26, 26);
+  width: 16px;
+  height: 15px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 14px;
+  left: 10px;
+}

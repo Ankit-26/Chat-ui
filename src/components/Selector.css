@@ -1,0 +1,23 @@
+.selector {
+  width: 100%;
+  padding: 0 3px;
+  color: #8a8989;
+  font-size: small;
+}
+
+.selector-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #8a8989;
+  border-radius: 4px;
+  padding: 8px;
+  position: relative;
+}
+
+.selector-box span {
+  position: absolute;
+  bottom: 37px;
+  background-color: #3c3a3a;
+  padding: 0 2px;
+}

@@ -1,0 +1,20 @@
+.chat {
+  display: flex;
+  align-items: center;
+  margin: 0.7em;
+  padding: 0.3em;
+  border-radius: 4px;
+
+  height: auto;
+
+  cursor: pointer;
+}
+
+.chat-data {
+  padding-left: 0.7em;
+}
+
+.data {
+  padding: 0.1em;
+  color: #adacac;
+}

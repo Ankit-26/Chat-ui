@@ -1,0 +1,39 @@
+.input-box {
+  display: flex;
+  align-items: center;
+  width: 61%;
+  margin: 0 2em;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 1px rgb(46 46 46);
+  background-color: #3c3a3a;
+  padding: 0.2em 0.5em;
+  margin-top: 0em;
+  position: fixed;
+  top: 95vh;
+}
+
+.input-box svg {
+  color: rgb(158, 158, 158);
+}
+
+.input-container {
+  width: 100%;
+}
+
+.input-text {
+  padding: 8px 1px;
+  background-color: #3c3a3a;
+  color: #d4d0d0;
+  outline: none;
+  border: none;
+  width: 98%;
+  border-bottom: 2px solid #585656;
+  margin-left: 15px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.input-text::-webkit-input-placeholder {
+  font-size: 1.3em;
+  font-weight: 500;
+}
