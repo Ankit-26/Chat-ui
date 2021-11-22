@@ -6,14 +6,16 @@
 
 .App {
   height: 100vh;
+  background-color: rgb(50 50 50);
+  width: 100vw;
 }
 
 .body {
   display: flex;
-  background-color: rgb(50 50 50);
+
   margin: 0;
   padding: 0;
-  height: 902px;
+  height: 100%;
 }
 
 .body-right {
@@ -28,5 +30,5 @@
   display: flex;
 
   margin-top: 1.3em;
-  height: 82%;
+  height: 100%;
 }
