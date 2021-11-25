@@ -12,6 +12,7 @@ function ChatScreen(props) {
   const [chatText, setchatText] = useState([]);
   //console.log(props.chatID);
   const [sentText, setSentText] = useState([{ id: null, textMessage: "" }]);
+
   useEffect(() => {
     //let chatarr = chatMessage.chats.filter(
     //(chat) => chat.conversationId === props.chatID
@@ -27,7 +28,7 @@ function ChatScreen(props) {
     setSentText([...sentText, { id: props.chatID, textMessage: input }]);
   };
 
-  console.log(sentText);
+  //console.log(sentText);
 
   //console.log(chatText);
 
@@ -38,7 +39,7 @@ function ChatScreen(props) {
           return <Message chatline={chatline} key={uuidv4()} />;
         })}
         {sentText
-          .filter((currChats) => currChats.id == props.chatID)
+          .filter((currChats) => currChats.id === props.chatID)
           .map((text) => {
             return <NewMessage text={text.textMessage} key={uuidv4()} />;
           })}
