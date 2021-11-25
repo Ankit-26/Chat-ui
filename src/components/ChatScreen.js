@@ -34,16 +34,20 @@ function ChatScreen(props) {
 
   return (
     <div className="chat-screen">
-      <div className="all-chats">
-        {chatText.map((chatline) => {
-          return <Message chatline={chatline} key={uuidv4()} />;
-        })}
-        {sentText
-          .filter((currChats) => currChats.id === props.chatID)
-          .map((text) => {
-            return <NewMessage text={text.textMessage} key={uuidv4()} />;
+      {props.chatID != null ? (
+        <div className="all-chats">
+          {chatText.map((chatline) => {
+            return <Message chatline={chatline} key={uuidv4()} />;
           })}
-      </div>
+          {sentText
+            .filter((currChats) => currChats.id === props.chatID)
+            .map((text) => {
+              return <NewMessage text={text.textMessage} key={uuidv4()} />;
+            })}
+        </div>
+      ) : (
+        ""
+      )}
 
       <InputBox sendMessage={sendMessage} />
     </div>
