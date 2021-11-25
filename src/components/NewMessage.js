@@ -1,17 +1,12 @@
 import React from "react";
-import "../components/Message.css";
+import "../components/NewMessage.css";
 
-function Message(props) {
-  const { message, createdAt } = props.chatline;
-  //console.log(props.chatline.userType + " " + message);
-
-  let marginval = 0;
-  if (props.chatline.userType === "admin") {
-    marginval = 44;
-  }
+function NewMessage(props) {
+  const { text } = props;
+  console.log(text);
 
   const dateTime = () => {
-    var today = new Date(createdAt);
+    var today = new Date();
     var dd = String(today.getDate()).padStart(2, "0");
     var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
     var yyyy = today.getFullYear();
@@ -24,12 +19,12 @@ function Message(props) {
 
   return (
     <div className="message-container">
-      <div className="message-box" style={{ marginLeft: `${marginval}vw` }}>
-        <div className="text">{message}</div>
+      <div className="message-box" style={{ marginLeft: `44vw` }}>
+        <div className="text">{text}</div>
         <div className="date-time">{dateTime()}</div>
       </div>
     </div>
   );
 }
 
-export default Message;
+export default NewMessage;

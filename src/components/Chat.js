@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
 import "../components/Chat.css";
 
 function Chat(props) {
-  const [shadowval, setShadowVal] = useState(1);
-
   const { firstName, profilePic } = props.chat.user;
   const { message } = props.chat.chats[0];
-  const { updatedAt } = props.chat;
+  const { updatedAt, id } = props.chat;
 
-  console.log(shadowval);
+  //console.log(props.chat.id);
 
   const dateTime = () => {
     var today = new Date(updatedAt);
@@ -27,10 +25,10 @@ function Chat(props) {
   return (
     <div
       className="chat"
-      style={{ boxShadow: `0px 2px 4px ${shadowval}px rgb(46 46 46)` }}
-      onClick={() => setShadowVal(5)}
+      style={{ boxShadow: `0px 2px 4px ${props.val}px rgb(46 46 46)` }}
+      onClick={() => props.setShadowVal(id)}
     >
-      <img src={profilePic} className="profile-pic" />
+      <img src={profilePic} className="profile-pic" alt="user" />
       <div className="chat-data">
         <div className="data" style={{ fontSize: "0.85em" }}>
           {firstName}

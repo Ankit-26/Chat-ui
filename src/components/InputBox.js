@@ -3,15 +3,16 @@ import AttachmentIcon from "@mui/icons-material/Attachment";
 import MicIcon from "@mui/icons-material/Mic";
 import SendIcon from "@mui/icons-material/Send";
 import "../components/InputBox.css";
+import { Button } from "@mui/material";
 
-function InputBox() {
+function InputBox(props) {
   const [input, setInput] = useState("");
 
   const inputHandler = (ev) => {
     setInput(ev.target.value);
   };
 
-  console.log(input);
+  //console.log(input);
 
   return (
     <div className="input-box">
@@ -26,12 +27,23 @@ function InputBox() {
         ></input>
       </div>
       <MicIcon />
-      <div style={{ color: "#d4d0d0", paddingRight: "5px" }}>|</div>
-      {input ? (
-        <SendIcon style={{ color: "rgb(25, 118, 210)" }} />
-      ) : (
-        <SendIcon />
-      )}
+      <div style={{ color: "#d4d0d0", paddingRight: "2px" }}>|</div>
+      <Button
+        type="submit"
+        onClick={() => {
+          props.sendMessage(input);
+          setInput("");
+        }}
+      >
+        {input ? (
+          <SendIcon
+            style={{ color: "rgb(25, 118, 210)" }}
+            className="send-icon"
+          />
+        ) : (
+          <SendIcon className="send-icon" />
+        )}
+      </Button>
     </div>
   );
 }

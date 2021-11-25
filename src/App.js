@@ -4,8 +4,14 @@ import Leftsidebar from "./components/Leftsidebar";
 import ToolHeader from "./components/ToolHeader";
 import ChatList from "./components/ChatList";
 import ChatScreen from "./components/ChatScreen";
+//import chatMessage from "./components/Chat";
+//import data from "./db";
+import { useState } from "react";
 
 function App() {
+  const [chatID, setChatID] = useState(null);
+
+  //console.log(chatID);
   return (
     <div className="App">
       <Navbar />
@@ -14,8 +20,8 @@ function App() {
         <div className="body-right">
           <ToolHeader />
           <div className="body-RightBottomSection">
-            <ChatList />
-            <ChatScreen />
+            <ChatList setChatID={setChatID} />
+            <ChatScreen chatID={chatID} />
           </div>
         </div>
       </div>

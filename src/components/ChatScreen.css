@@ -1,14 +1,19 @@
 .chat-screen {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   background-color: #3c3a3a;
   margin-left: 1.5em;
   border-radius: 4px;
   box-shadow: 0px 0px 10px 1px rgb(36 36 36);
   width: 100%;
+}
+
+.all-chats {
+  padding-bottom: 3.5em;
   overflow-y: scroll;
 }
 
-.chat-screen::-webkit-scrollbar {
+.all-chats::-webkit-scrollbar {
   display: none;
 }
