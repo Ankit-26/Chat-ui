@@ -41,3 +41,10 @@
 .send-icon {
   margin-right: 1em;
 }
+
+.input-box button {
+  background-color: #3c3a3a;
+  border: none;
+  padding-top: 4px;
+  cursor: pointer;
+}
